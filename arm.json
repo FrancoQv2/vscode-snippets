@@ -1,0 +1,54 @@
+{
+	// Place your snippets for arm here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Definicion de un PORT GPIO": {
+		"prefix": ".port",
+		"body": [
+			".equ $1_PORT,    $2"
+		],
+		"description": "Definicion de un PORT GPIO"
+	},
+	"Definicion de un PIN GPIO": {
+		"prefix": ".pin",
+		"body": [
+			".equ $1_PIN,     $2"
+		],
+		"description": "Definicion de un PIN GPIO"
+	},
+	"Definicion de un BIT GPIO": {
+		"prefix": ".bit",
+		"body": [
+			".equ $1_BIT,     $2"
+		],
+		"description": "Definicion de un BIT GPIO"
+	},
+	"Definicion de una MASK GPIO": {
+		"prefix": ".mask",
+		"body": [
+			".equ $1_MASK,    (1 << $1_BIT)"
+		],
+		"description": "Definicion de una MASK GPIO"
+	},
+	"Definicion de un GPIO": {
+		"prefix": ".gpio_led",
+		"body": [
+			".equ $1_PORT,    $2",
+			".equ $1_PIN,     $3",
+			".equ $1_BIT,     $4",
+			".equ $1_MASK,    (1 << $1_BIT)",
+		],
+		"description": "Definicion de un GPIO"
+	},
+}
